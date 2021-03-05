@@ -10,7 +10,12 @@ The backend is based on my [Python MJPEG Websockets Server](https://github.com/w
 ## Getting Started
 ### Hardware
 This schematic contains an e-paper module. You can ignore it. 
+
 ![Schematic](/images/Schematic_ESP32S2CAM.png)
+
+I designed a pcb for it.
+
+![PCB](images/pcb.jpeg)
 
 ### Code
 Change these lines in `main/esp32s2_camera.c`
