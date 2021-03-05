@@ -1,0 +1,41 @@
+{
+  "C_Cpp.clang_format_style": "Visual Studio",
+  "editor.formatOnSave": false,
+  "[cpp]": {
+    "editor.quickSuggestions": true
+  },
+  "[c]": {
+    "editor.quickSuggestions": true
+  },
+  "C_Cpp.intelliSenseEngineFallback": "Enabled",
+  "files.associations": {
+    "array": "cpp",
+    "bitset": "cpp",
+    "string_view": "cpp",
+    "initializer_list": "cpp",
+    "utility": "cpp",
+    "valarray": "cpp",
+    "__hash_table": "cpp",
+    "__split_buffer": "cpp",
+    "__tree": "cpp",
+    "deque": "cpp",
+    "iterator": "cpp",
+    "list": "cpp",
+    "map": "cpp",
+    "queue": "cpp",
+    "random": "cpp",
+    "set": "cpp",
+    "stack": "cpp",
+    "string": "cpp",
+    "unordered_map": "cpp",
+    "unordered_set": "cpp",
+    "vector": "cpp",
+    "__locale": "cpp",
+    "chrono": "cpp",
+    "*.cuh": "cpp",
+    "cstdint": "c",
+    "*.tcc": "cpp",
+    "__config": "cpp",
+    "*.ipp": "c"
+  }
+}

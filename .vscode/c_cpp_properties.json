@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "includePath": [
+                "/home/soh/Arduino/tools/**",
+                "/home/soh/Arduino/libraries/**",
+                "/home/soh/arduino-1.8.13/libraries/**",
+                "/home/soh/Arduino/hardware/espressif/esp32/**",
+                "${config:idf.espIdfPath}/components/**",
+                "${config:idf.espIdfPathWin}/components/**",
+                "${workspaceFolder}/**"
+            ],
+            "browse": {
+                "path": [
+                    "${config:idf.espIdfPath}/components",
+                    "${config:idf.espIdfPathWin}/components",
+                    "${workspaceFolder}"
+                ],
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "forcedInclude": [],
+            "defines": [
+                "USBCON"
+            ]
+        }
+    ],
+    "version": 4
+}
