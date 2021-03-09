@@ -261,7 +261,7 @@ static void cam_task(void *arg)
     esp_websocket_client_send_bin(client, (const char*)cam_buf, len, portMAX_DELAY);
     ESP_LOGI(TAG, "sent");
     cam_give(cam_buf);
-    yield();
+    //yield();
     /*!< Use a logic analyzer to observe the frame rate */
   }
 
