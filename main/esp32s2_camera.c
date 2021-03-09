@@ -48,15 +48,15 @@ static const char *TAG = "main";
 #define CAM_XCLK GPIO_NUM_7
 #define CAM_PCLK GPIO_NUM_10
 #define CAM_VSYNC GPIO_NUM_4
-#define CAM_HSYNC GPIO_NUM_5
-#define CAM_D0 GPIO_NUM_39
-#define CAM_D1 41
-#define CAM_D2 42
-#define CAM_D3 40
-#define CAM_D4 GPIO_NUM_38
-#define CAM_D5 GPIO_NUM_9
-#define CAM_D6 GPIO_NUM_8
-#define CAM_D7 GPIO_NUM_6
+#define CAM_HREF GPIO_NUM_5
+#define CAM_D2 GPIO_NUM_39
+#define CAM_D3 41
+#define CAM_D4 42
+#define CAM_D5 40
+#define CAM_D6 GPIO_NUM_38
+#define CAM_D7 GPIO_NUM_9
+#define CAM_D8 GPIO_NUM_8
+#define CAM_D9 GPIO_NUM_6
 #define CAM_SCL GPIO_NUM_3
 #define CAM_SDA GPIO_NUM_1
 
@@ -189,9 +189,9 @@ static void cam_task(void *arg)
           .xclk = CAM_XCLK,
           .pclk = CAM_PCLK,
           .vsync = CAM_VSYNC,
-          .hsync = CAM_HSYNC,
+          .hsync = CAM_HREF,
       },
-      .pin_data = {CAM_D0, CAM_D1, CAM_D2, CAM_D3, CAM_D4, CAM_D5, CAM_D6, CAM_D7},
+      .pin_data = {CAM_D2, CAM_D3, CAM_D4, CAM_D5, CAM_D6, CAM_D7, CAM_D8, CAM_D9},
       .vsync_invert = true,
       .hsync_invert = false,
       .size = {
@@ -261,7 +261,7 @@ static void cam_task(void *arg)
     esp_websocket_client_send_bin(client, (const char*)cam_buf, len, portMAX_DELAY);
     ESP_LOGI(TAG, "sent");
     cam_give(cam_buf);
-    //yield();
+    vTaskDelay(1); // prevent WDT reset
     /*!< Use a logic analyzer to observe the frame rate */
   }
 
