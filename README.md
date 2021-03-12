@@ -1,6 +1,6 @@
 # ESP32S2 Camera + Websockets stream
 
-ESP32S2 with OV2640 Camera websockets stream example. JPEG images captured from camera is streamed to server via websockets. User can view the stream at browser.
+ESP32S2 with OV2640 Camera websockets stream example. JPEG images captured from camera is streamed to server via websockets. User can view the stream at browser. Current implementation can achieve around 15 fps.
 
 Code is written with esp-idf.
 
@@ -9,7 +9,7 @@ The backend is based on my [Python MJPEG Websockets Server](https://github.com/w
 
 ## Getting Started
 ### Hardware
-This schematic contains an e-paper module. You can ignore it. 
+This schematic contains an e-paper module used [here](https://github.com/wms2537/esp32s2-epaper-qr). You can ignore it. 
 
 ![Schematic](/images/Schematic_ESP32S2CAM.png)
 
