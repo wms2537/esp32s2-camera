@@ -2,6 +2,8 @@
 
 ESP32S2 with OV2640 Camera websockets stream example. JPEG images captured from camera is streamed to server via websockets. User can view the stream at browser. Current implementation can achieve around 15 fps.
 
+Another version using udp is available [here](https://github.com/wms2537/esp32s2-camera-udp).
+
 Code is written with esp-idf.
 
 ## Backend
